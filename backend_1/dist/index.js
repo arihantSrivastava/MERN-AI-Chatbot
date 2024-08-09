@@ -1,9 +1,9 @@
-import express from "express";
-const app = express();
-app.use(express.json());
-app.post('/hello', (req, res, next) => {
-    res.send("hello");
-    console.log(req.body.name);
-});
-app.listen(5000, () => console.log("Server Started"));
+import app from './app.js';
+import { connectToDatabase } from './db/connection.js';
+const PORT = process.env.PORT || 5000;
+connectToDatabase()
+    .then(() => {
+    app.listen(PORT, () => console.log("Server Started"));
+})
+    .catch((err) => console.log(err));
 //# sourceMappingURL=index.js.map
