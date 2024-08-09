@@ -33,7 +33,7 @@ const Chat = () => {
   };
   const handleDeleteChats = async () => {
     try {
-      toast.loading("Deleting Chats", { id: "deletechats" });
+      toast.loading("Deleting Chat", { id: "deletechats" });
       await deleteUserChats();
       setChatMessages([]);
       toast.success("Deleted Chats Successfully", { id: "deletechats" });
