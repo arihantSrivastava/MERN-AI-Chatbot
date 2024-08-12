@@ -21,7 +21,7 @@ export const signup = async (req, res, next) => {
     }
     catch (error) {
         console.log(error);
-        return res.status(400).json({ message: "error", cause: error.message });
+        return res.status(400).json({ message: "error from signup controller", cause: error.message });
     }
 };
 //# sourceMappingURL=user-controllers.js.map

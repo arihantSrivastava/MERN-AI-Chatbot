@@ -24,6 +24,6 @@ export   const signup = async (req,res, next)=>{
         return res.status(200).json({message:"User Created", id: user._id.toString()})
     } catch (error) {
         console.log(error)
-        return res.status(400).json({message:"error", cause: error.message})
+        return res.status(400).json({message:"error from signup controller", cause: error.message})
     }
 }
